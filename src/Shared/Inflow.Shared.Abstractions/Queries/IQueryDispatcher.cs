@@ -5,5 +5,5 @@ namespace Inflow.Shared.Abstractions.Queries;
 
 public interface IQueryDispatcher
 {
-    Task<TResult> QueryAsync<TResult>(IQuery<TResult> query, CancellationToken cancellationToken = default) where TResult : class;
+    Task<TResult> QueryAsync<TResult>(IQuery<TResult> query, CancellationToken cancellationToken = default);
 }

@@ -6,7 +6,7 @@ namespace Inflow.Shared.Infrastructure.Queries.Decorators;
 
 [Decorator]
 internal sealed class PagedQueryHandlerDecorator<TQuery, TResult> : IQueryHandler<TQuery, TResult>
-    where TQuery : class, IQuery<TResult> where TResult : class
+    where TQuery : class, IQuery<TResult>
 {
     private readonly IQueryHandler<TQuery, TResult> _handler;
 
