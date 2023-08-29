@@ -27,6 +27,6 @@ internal sealed class InMemoryDispatcher : IDispatcher
     public Task PublishAsync<T>(T @event, CancellationToken cancellationToken = default) where T : class, IEvent
         => _eventDispatcher.PublishAsync(@event, cancellationToken);
 
-    public Task<TResult> QueryAsync<TResult>(IQuery<TResult> query, CancellationToken cancellationToken = default)
-        => _queryDispatcher.QueryAsync(query, cancellationToken);
+    public Task<TResult> QueryAsync<TResult>(IQuery<TResult> query, CancellationToken cancellationToken = default) where TResult : class =>
+        _queryDispatcher.QueryAsync(query, cancellationToken);
 }

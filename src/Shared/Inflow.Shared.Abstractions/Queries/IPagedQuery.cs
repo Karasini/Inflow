@@ -6,6 +6,6 @@ public interface IPagedQuery : IQuery
     int Results { get; set; }
 }
     
-public interface IPagedQuery<T> : IPagedQuery, IQuery<T>
+public interface IPagedQuery<T> : IPagedQuery, IQuery<T> where T : class
 {
 }

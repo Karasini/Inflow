@@ -5,6 +5,6 @@ public interface IQuery
 {
 }
 
-public interface IQuery<T> : IQuery
+public interface IQuery<T> : IQuery where T : class
 {
 }

@@ -9,7 +9,7 @@ namespace Inflow.Shared.Infrastructure.Logging.Decorators;
 
 [Decorator]
 internal sealed class LoggingQueryHandlerDecorator<TQuery, TResult> : IQueryHandler<TQuery, TResult>
-    where TQuery : class, IQuery<TResult>
+    where TQuery : class, IQuery<TResult> where TResult : class
 {
     private readonly IQueryHandler<TQuery, TResult> _handler;
     private readonly IContext _context;
